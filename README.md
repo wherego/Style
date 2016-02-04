@@ -2,8 +2,8 @@
 ===
 
 ## 介绍
-该项目是使用豆瓣电影api实现的一个简单应用.
-目的是展示如何使用RxJava+Retrofit来编写一个应用.
+该项目是使用豆瓣电影api实现的一个简单应用.<br>
+目的是展示如何使用RxJava+Retrofit来编写一个应用.<br>  
 
 ## 环境
 * Java Version 1.8
