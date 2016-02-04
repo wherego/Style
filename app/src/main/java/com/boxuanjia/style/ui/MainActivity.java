@@ -1,5 +1,7 @@
 package com.boxuanjia.style.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -39,7 +41,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         if (id == R.id.nav_video) {
 
         } else if (id == R.id.nav_github) {
-
+            openGithub();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -80,4 +82,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    private void openGithub() {
+        Uri uri = Uri.parse("https://github.com/BoxuanJia/Style");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
 }
