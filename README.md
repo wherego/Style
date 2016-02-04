@@ -1,14 +1,15 @@
 格调
 ===
+
 ## 介绍
 该项目是使用豆瓣电影api实现的一个简单应用.
 目的是展示如何使用RxJava+Retrofit来编写一个应用.
 
 ## 环境
-Java Version 1.8
-Min Sdk Version 14
-Android Studio 1.5.1
-Gradle 1.5.0
+* Java Version 1.8
+* Min Sdk Version 14
+* Android Studio 1.5.1
+* Gradle 1.5.0
 
 ## 预览
 ![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot1.png)![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot2.png)![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot3.png)
