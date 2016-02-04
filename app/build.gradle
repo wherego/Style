@@ -15,7 +15,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
     signingConfigs {
         debug {
@@ -49,9 +49,6 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    /*检测内存泄漏 leakcanary*/
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
     /*打印信息 logger*/
     compile 'com.github.orhanobut:logger:1.12'
     /*响应式 RxJava*/
@@ -59,7 +56,7 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.0'
     /*解析json Gson*/
     compile 'com.google.code.gson:gson:2.4'
-    /*网络请求 Retrofit2*/
+    /*网络请求 Retrofit*/
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta3'

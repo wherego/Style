@@ -8,9 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.boxuanjia.style.StyleApplication;
-import com.squareup.leakcanary.RefWatcher;
-
 public abstract class BaseFragment extends Fragment {
 
     @Override
@@ -72,8 +69,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        RefWatcher refWatcher = StyleApplication.getRefWatcher(getActivity());
-        refWatcher.watch(this);
     }
 
     @Override
