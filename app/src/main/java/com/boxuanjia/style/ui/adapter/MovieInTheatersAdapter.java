@@ -7,20 +7,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.boxuanjia.style.R;
+import com.boxuanjia.style.ui.holder.ItemOnClickListener;
 import com.boxuanjia.style.ui.holder.MovieInTheatersHolder;
 import com.boxuanjia.style.ui.model.IMovieInTheaters;
 import com.boxuanjia.loadmore.LoadMoreAdapter;
 
 import java.util.List;
 
-public class MovieInTheatersAdapter extends LoadMoreAdapter {
+public class MovieInTheatersAdapter extends LoadMoreAdapter implements ItemOnClickListener {
 
     private IMovieInTheaters iMovieInTheaters;
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolderWithoutLoadMore(ViewGroup parent, int position) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_movie_in_theaters, parent, false);
-        return new MovieInTheatersHolder(view);
+        MovieInTheatersHolder holder = new MovieInTheatersHolder(view);
+        holder.setItemOnClickListener(this);
+        return holder;
     }
 
     @Override
@@ -51,5 +54,10 @@ public class MovieInTheatersAdapter extends LoadMoreAdapter {
 
     public void setIMovieInTheaters(IMovieInTheaters iMovieInTheaters) {
         this.iMovieInTheaters = iMovieInTheaters;
+    }
+
+    @Override
+    public void onClick(RecyclerView.ViewHolder viewHolder) {
+        iMovieInTheaters.onClick(viewHolder.getLayoutPosition());
     }
 }

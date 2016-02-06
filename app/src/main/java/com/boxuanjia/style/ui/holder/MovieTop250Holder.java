@@ -1,6 +1,7 @@
 package com.boxuanjia.style.ui.holder;
 
 import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -11,7 +12,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
-public class MovieTop250Holder extends RecyclerView.ViewHolder {
+public class MovieTop250Holder extends BaseMovieHolder implements View.OnClickListener {
 
     private SimpleDraweeView image;
 
@@ -25,6 +26,8 @@ public class MovieTop250Holder extends RecyclerView.ViewHolder {
 
     public MovieTop250Holder(View itemView) {
         super(itemView);
+        CardView cardView = (CardView) itemView.findViewById(R.id.card);
+        cardView.setOnClickListener(this);
         image = (SimpleDraweeView) itemView.findViewById(R.id.image);
         textName = (TextView) itemView.findViewById(R.id.name);
         textGenres = (TextView) itemView.findViewById(R.id.genres);
@@ -54,5 +57,15 @@ public class MovieTop250Holder extends RecyclerView.ViewHolder {
     public void setRating(float rating) {
         textRating.setText(String.valueOf(rating));
         this.rating.setPercent(rating * 10);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (itemOnClickListener == null) {
+            return;
+        }
+        if (v.getId() == R.id.card) {
+            itemOnClickListener.onClick(this);
+        }
     }
 }

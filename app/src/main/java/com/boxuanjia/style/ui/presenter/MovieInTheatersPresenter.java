@@ -6,6 +6,7 @@ import com.boxuanjia.style.http.model.MovieInTheaters;
 import com.boxuanjia.style.http.model.SimpleSubject;
 import com.boxuanjia.style.ui.model.IMovieInTheaters;
 import com.boxuanjia.style.ui.view.IMovieView;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,22 @@ public class MovieInTheatersPresenter implements IMovieInTheaters {
     @Override
     public float rating(int position) {
         return simpleSubjects.get(position).getRating().getAverage();
+    }
+
+    @Override
+    public void onClick(int position) {
+        Logger.d("编号 = " + position);
+        String id = simpleSubjects.get(position).getId();
+        // TODO 获得电影信息
+        /*DouBan.INSTANCE.getDouBan().getMovieSubject(id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ErrorSubscriber());*/
+        // TODO 获取电影剧照
+        /*DouBan.INSTANCE.getDouBan().getMovieSubjectPhoto(id, 0, 20)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ErrorSubscriber());*/
     }
 
     public void request() {

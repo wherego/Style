@@ -14,4 +14,5 @@ public interface IMovieInTheaters {
 
     float rating(int position);
 
+    void onClick(int position);
 }

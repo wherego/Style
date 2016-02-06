@@ -28,11 +28,11 @@ public interface DouBanInterface {
 
     // 电影条目信息
     @GET("/v2/movie/subject/{id}")
-    Observable<MovieSubject> getMovieSubject(@Path("id") int id);
+    Observable<MovieSubject> getMovieSubject(@Path("id") String id);
 
     // 电影条目剧照
     @GET("/v2/movie/subject/{id}/photos")
-    Observable<MovieSubjectPhoto> getMovieSubjectPhoto(@Path("id") int id, @Query("start") int start, @Query("count") int count);
+    Observable<MovieSubjectPhoto> getMovieSubjectPhoto(@Path("id") String id, @Query("start") int start, @Query("count") int count);
 
     // 电影条目长评
     @GET("/v2/movie/subject/{id}/reviews")
