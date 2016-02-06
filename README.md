@@ -22,7 +22,7 @@
 * [Fresco](https://github.com/facebook/fresco)  
 
 ## 下载
-* [FIR]()
+* [FIR](http://fir.im/elum)
     * 版本 0.0.1
     * 当前功能 因为授权问题暂时只支持查看电影的基本信息
     * 下版功能 查看电影相关的剧照
