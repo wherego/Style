@@ -12,7 +12,7 @@
 * Gradle 1.5.0
 
 ## 预览
-![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot1.png)![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot2.png)![Screenshot](https://github.com/BoxuanJia/Style/blob/master/screenshots/screenshot3.png)
+![Screenshot](https://raw.githubusercontent.com/BoxuanJia/Style/master/screenshots/screenshot1.png)![Screenshot](https://raw.githubusercontent.com/BoxuanJia/Style/master/screenshots/screenshot2.png)![Screenshot](https://raw.githubusercontent.com/BoxuanJia/Style/master/screenshots/screenshot3.png)
 
 ## 引用
 * [Logger](https://github.com/orhanobut/logger)
